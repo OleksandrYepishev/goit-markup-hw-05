@@ -138,6 +138,7 @@ img {
 .site-nav,
 .site-contacts {
   display: flex;
+  align-items: center;
 
   font-weight: 500;
   font-size: 14px;
@@ -147,7 +148,6 @@ img {
 
 .site-nav .list {
   margin-left: 93px;
-  align-items: center;
 }
 
 .site-contacts {
@@ -214,6 +214,25 @@ img {
 
 .site-contacts .item + .item {
   margin-left: 50px;
+}
+
+.page-header {
+  /* Первый вариант фиксированного хедера */
+
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--primary-white-color);
+
+  /* второй вариант фиксированного хэдера */
+
+  /* position: sticky;
+  top: -1px; */
+
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #ececec;
 }
 
 /* Герой */
@@ -574,11 +593,6 @@ img {
 }
 
 /* Страница Портфолио  */
-.page-header {
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: #ececec;
-}
 
 /* Фильтра */
 .filter.list {
