@@ -12,6 +12,7 @@
 
   --secondary-bg-color: #f5f4fa;
   --black-bg-color: #2f303a;
+  --card-main-bg-color: rgba(47, 48, 58, 0.8);
 
   --set-gap: 30px;
 
@@ -377,6 +378,31 @@ img {
 
 .projects.list > .item:not(:nth-child(3n)) {
   margin-right: var(--set-gap);
+}
+
+.projects .item {
+  position: relative;
+}
+
+.projects .text {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 27px 82px;
+  margin: 0;
+
+  font-family: Roboto, sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  background-color: var(--card-main-bg-color);
+  color: var(--primary-white-color);
 }
 
 /* секция наша команда */
