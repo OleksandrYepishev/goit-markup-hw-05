@@ -693,8 +693,8 @@ img {
 }
 
 .join {
-  justify-content: center;
   margin-bottom: 20px;
+  text-align: left;
 
   font-weight: bold;
   font-size: 14px;
