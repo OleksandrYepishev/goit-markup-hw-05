@@ -58,7 +58,16 @@
       <section class="hero">
         <div class="container">
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-          <a href="#" class="button">Заказать услугу</a>
+          <button data-open-modal class="button">Заказать услугу</button>
+          <div class="backdrop is-hidden" data-backdrop>
+            <div class="modal">
+              <button data-close-modal class="modal-close">
+                <svg width="18" height="18" class="icon-close">
+                  <use href="./images/icons.svg#icon-close"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
         </div>
       </section>
       <!-- Наши преимущества -->
@@ -466,6 +475,26 @@
         const header = document.querySelector('.page-header');
         const { height } = header.getBoundingClientRect();
         document.body.style = `padding-top: ${height}px`;
+      }
+    </script>
+    <script>
+      const refs = {
+        openModalBtn: document.querySelector('[data-open-modal]'),
+        closeModalBtn: document.querySelector('[data-close-modal]'),
+        backdrop: document.querySelector('[data-backdrop]'),
+      };
+
+      refs.openModalBtn.addEventListener('click', toggleModal);
+      refs.closeModalBtn.addEventListener('click', toggleModal);
+
+      refs.backdrop.addEventListener('click', logBackdropClick);
+
+      function toggleModal() {
+        refs.backdrop.classList.toggle('is-hidden');
+      }
+
+      function logBackdropClick() {
+        console.log('Это клик в бекдроп');
       }
     </script>
   </body>
