@@ -229,12 +229,12 @@ img {
 .page-header {
   /* Первый вариант фиксированного хедера */
 
-  width: 100%;
+  /* width: 100%;
   position: fixed;
   top: 0;
   left: 0;
   background-color: var(--primary-white-color);
-  z-index: 3;
+  z-index: 3; */
 
   /* второй вариант фиксированного хэдера */
 
